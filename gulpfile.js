@@ -24,14 +24,12 @@ gulp.task('browserSync', function () {
 
 gulp.task('postcss', function () {
 	const processor = ([
-		//autoprefixer({browsers: ['last 10 version']}),
-		cssnano(),
-		fonts()
+		fonts(),
+		autoprefixer({browsers: ['last 10 version']}),
+		cssnano()
 	]);
 	return gulp.src('./assets/sass/*.sass')
-		.pipe(sass({
-			includePaths: bourbon.includePaths
-		}).on("error", notify.onError()))
+		.pipe(sass().on("error", notify.onError()))
 		.pipe(media())
 		.pipe(postcss(processor))
 		.pipe(gulp.dest('./assets/css'))
