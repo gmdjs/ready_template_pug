@@ -2,20 +2,20 @@
 $setup: bootstrap !default
 
 @if $setup == mdl
-  $xl: 1600px
-  $lg: 1280px
-  $md: 960px
-  $sm: 600px
-  $xs: 480px
+  $xl: 1600px + $margin * 3
+  $lg: 1280px + $margin * 3
+  $md: 960px + $margin * 3
+  $sm: 600px + $margin * 3
+  $xs: 480px + $margin * 3
 @else if $setup == md
-  $xl: 1440px
-  $lg: 1280px
-  $md: 840px
-  $sm: 600px
-  $xs: 480px
+  $xl: 1440px + $margin * 3
+  $lg: 1280px + $margin * 3
+  $md: 840px + $margin * 3
+  $sm: 600px + $margin * 3
+  $xs: 480px + $margin * 3
 @else if $setup == bootstrap
-  $xl: 1200px
-  $lg: 992px
-  $md: 768px
-  $sm: 576px
-  $xs: $sm - 1px
+  $xl: 1200px + $margin * 3
+  $lg: 992px + $margin * 3
+  $md: 768px + $margin * 3
+  $sm: 576px + $margin * 3
+  $xs: $sm - 1px + $margin * 3
