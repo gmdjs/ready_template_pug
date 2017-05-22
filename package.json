@@ -36,8 +36,6 @@
     "gulp-notify": "^3.0.0",
     "gulp-postcss": "^6.4.0",
     "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "node-bourbon": "^4.2.8",
-    "postcss-font-magician": "^1.6.1"
+    "gulp-sass": "^3.1.0"
   }
 }

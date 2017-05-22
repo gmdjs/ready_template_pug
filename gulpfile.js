@@ -3,8 +3,7 @@ let browserSync = require('browser-sync'),
 
 		postcss = require('gulp-postcss'),
 		autoprefixer = require('autoprefixer'),
-		cssnano = require('cssnano'),
-		fonts = require('postcss-font-magician'),
+		cssnano = require('cssnano')
 
 		sass = require('gulp-sass'),
 		image = require('gulp-image'),
@@ -24,8 +23,7 @@ gulp.task('browserSync', function () {
 
 gulp.task('postcss', function () {
 	const processor = ([
-		fonts(),
-		autoprefixer({browsers: ['last 10 version']}),
+		autoprefixer({browsers: ['last 2 versions', 'safari 5']}),
 		cssnano()
 	]);
 	return gulp.src('./assets/sass/*.sass')
